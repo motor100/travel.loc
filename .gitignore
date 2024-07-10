@@ -1,0 +1,7 @@
+/node_modules
+.bowerrc
+.sublime-gulp.cache
+.sublime-gulp-tmp.js
+sublime-gulp.log
+/app/libs
+*.zip

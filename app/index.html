@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Путешествия по Уралу</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+
+  <header class="header hidden-mobile">
+
+  </header>
+
+  <div id="why-we" class="why-we">
+    
+  </div>
+
+  <div id="off-road-tour" class="off-road-tour">
+    
+  </div>
+
+  <div id="our-cars" class="our-cars">
+    
+  </div>
+
+  <div id="gallery" class="gallery">
+    
+  </div>
+
+  <div id="contacts" class="contacts">
+    
+  </div>
+
+
+  <footer class="footer section">
+
+  </footer>
+
+  <!-- mobile menu -->
+  <div class="burger-menu-wrapper hidden-desktop">
+    <div class="burger-menu">
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu hidden-desktop">
+    <div class="logo">
+      <img src="images/mobile-dark-logo.png" alt="">
+    </div>
+    <div class="address">г. Миасс, <br class="address-br">улица Богдана Хмельницкого 86</div>
+    <ul class="menu">
+      <li class="menu-item">
+        <a href="#about">О гостинице</a>
+      </li>
+      <li class="menu-item">
+        <a href="#rooms">Номера</a>
+      </li>
+      <li class="menu-item">
+        <a href="#contacts">Контакты</a>
+      </li>
+    </ul>
+    <div class="phone">
+      <a href="tel:+78002507505" class="phone-link">8 800 250 75 05</a>
+      <span class="phone-text"> — бронирование</span>
+    </div>
+    <div class="phone last-contacts-item">
+      <a href="tel:+79617964972" class="phone-link">+7 (961) 796 49 72</a>
+      <span class="phone-text"> — администратор</span>
+    </div>
+    <div class="social-icons">
+      <a href="viber://chat?number=%2B79617964972" class="social-icon-link" target="_blank">
+        <img src="images/viber-icon.png" class="social-icon-image" alt="">
+      </a>
+      <a href="https://wa.me/79617964972" class="social-icon-link" target="_blank">
+        <img src="images/whatsapp-icon.png" class="social-icon-image" alt="">
+      </a>
+    </div>
+    <button class="mobile-menu-callback-btn callback-btn">Перезвоните мне</button>
+  </div>
+  
+  <!-- feedback-modal -->
+  <div id="callback-modal" class="modal-window callback-modal">
+    <div class="modal-wrapper">
+      <div class="modal-area">
+        <div class="modal-close">
+          <div class="close"></div>
+        </div>
+        <div class="modal-title">Заполните форму</div>
+        <form id="callback-modal-form" class="form" method="post">
+          <label for="callback-name" class="label">Ваше имя</label>
+          <input type="text" id="callback-name" class="name input-field first-input-field" name="name" minlength="3" maxlength="20" required>
+          <label for="callback-phone" class="label">Ваш телефон</label>
+          <input type="text" id="callback-phone" class="phone input-field" name="phone" required minlength="3" maxlength="30">
+          <input type="hidden" id="modal-start-date" name="start-date" value="">
+          <input type="hidden" id="modal-guest" name="guest" value="">
+          <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
+          <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
+          <span class="checkbox-text">
+            Согласен с <span class="privacy-policy-btn" target="_blank">политикой обработки персональных данных</span></span>
+          <input type="button" class="submit-btn js-callback-modal-btn" value="Отправить">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- privacy-policy-modal -->
+  <div id="privacy-policy-modal" class="modal-window privacy-policy-modal">
+    <div class="modal-wrapper">
+      <div class="modal-area">
+        <div class="modal-close">
+          <div class="close"></div>
+        </div>
+        <div class="modal-title">Политика конфиденциальности</div>
+        <div class="modal-content">
+          <p>Комментарии</p>
+          <p>Если посетитель оставляет комментарий на сайте, мы собираем данные указанные в форме комментария, а также IP адрес посетителя и данные user-agent браузера с целью определения спама.</p>
+          <p>Анонимизированная строка создаваемая из вашего адреса email ("хеш") может предоставляться сервису Gravatar, чтобы определить используете ли вы его. Политика конфиденциальности Gravatar доступна здесь: https://automattic.com/privacy/ . После одобрения комментария ваше изображение профиля будет видимым публично в контексте вашего комментария.</p>
+          <p>Медиафайлы</p>
+          <p>Если вы зарегистрированный пользователь и загружаете фотографии на сайт, вам возможно следует избегать загрузки изображений с метаданными EXIF, так как они могут содержать данные вашего месторасположения по GPS. Посетители могут извлечь эту информацию скачав изображения с сайта.</p>
+          <p>Куки</p>
+          <p>Если вы оставляете комментарий на нашем сайте, вы можете включить сохранение вашего имени, адреса email и вебсайта в куки. Это делается для вашего удобства, чтобы не заполнять данные снова при повторном комментировании. Эти куки хранятся в течение одного года.</p>
+          <p>Если у вас есть учетная запись на сайте и вы войдете в неѐ, мы установим временный куки для определения поддержки куки вашим браузером, куки не содержит никакой личной информации и удаляется при закрытии вашего браузера.</p>
+          <p>При входе в учетную запись мы также устанавливаем несколько куки с данными входа и настройками экрана. Куки входа хранятся в течение двух дней, куки с настройками экрана - год. Если вы выберете возможность "Запомнить меня", данные о входе будут сохраняться в течение двух недель. При выходе из учетной записи куки входа будут удалены.</p>
+          <p>При редактировании или публикации статьи в браузере будет сохранен дополнительный куки, он не содержит персональных данных и содержит только ID записи отредактированной вами, истекает через 1 день.</p>
+          <p>Встраиваемое содержимое других вебсайтов</p>
+          <p>Статьи на этом сайте могут включать встраиваемое содержимое (например видео, изображения, статьи и др.), подобное содержимое ведет себя так же, как если бы посетитель зашел на другой сайт.</p>
+          <p>Эти сайты могут собирать данные о вас, использовать куки, внедрять дополнительное отслеживание третьей стороной и следить за вашим взаимодействием с внедренным содержимым, включая отслеживание взаимодействия, если у вас есть учетная запись и вы авторизовались на том сайте.</p>
+          <p>С кем мы делимся вашими данными</p>
+          <p>Если вы запросите сброс пароля, ваш IP будет указан в email-сообщении о сбросе.
+          <p>Как долго мы храним ваши данные</p>
+          <p>Если вы оставляете комментарий, то сам комментарий и его метаданные сохраняются неопределенно долго. Это делается для того, чтобы определять и одобрять последующие комментарии автоматически, вместо помещения их в очередь на одобрение.</p>
+          <p>Для пользователей с регистрацией на нашем сайте мы храним ту личную информацию, которую они указывают в своем профиле. Все пользователи могут видеть, редактировать или удалить свою информацию из профиля в любое время (кроме имени пользователя). Администрация вебсайта также может видеть и изменять эту информацию.</p>
+          <p>Какие у вас права на ваши данные</p>
+          <p>При наличии учетной записи на сайте или если вы оставляли комментарии, то вы можете запросить файл экспорта персональных данных, которые мы сохранили о вас, включая предоставленные вами данные. Вы также можете запросить удаление этих данных, это не включает данные, которые мы обязаны хранить в административных целях, по закону или целях безопасности.</p>
+          <p>Куда мы отправляем ваши данные</p>
+          <p>Комментарии пользователей могут проверяться автоматическим сервисом определения спама</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.min.js"></script>
+
+</body>
+</html>
