@@ -43,9 +43,6 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"air-datepicker": "^3.3.5",
-		"imask": "^6.4.3",
-		"photoswipe": "^5.3.5",
-		"swiper": "^9.0.3"
+		"imask": "^6.4.3"
 	}
 }

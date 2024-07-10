@@ -1,0 +1,65 @@
+// USER VARIABLES SECTION
+
+$basiccolor: #10171B; // Basic Color
+$orangecolor: #FF7A03; // Orange Color
+$greencolor: #54820A; // Green Color
+$fontsize: 16px; // Font Size
+$textcolor: #10171B; // Text Color
+$lineheight: 1.4; // Document Line Height
+$userfont: 'Unbounded', sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 24px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/swiper/swiper-bundle.min'; // Swiper bundle
+// @import 'node_modules/air-datepicker/air-datepicker'; // Air datepicker
+// @import 'node_modules/photoswipe/dist/photoswipe'; // Photoswipe
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('jost-light', normal, 400, '../fonts/jost-light.woff2');
+@include font('unbounded', normal, 400, '../fonts/unbounded-regular.woff2');
+@include font('jost-medium', normal, 400, '../fonts/jost-medium.woff2');
+@include font('unbounded-bold', normal, 400, '../fonts/unbounded-bold.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+// ::placeholder
+//   color: #7f7f7f
+
+* {
+  box-sizing: border-box;
+}
+
+input, textarea {
+  outline: none;
+}
+
+html {
+  font-size: $fontsize;
+}
+
+body {
+  font-family: $userfont;
+  line-height: $lineheight;
+  color: $textcolor;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
