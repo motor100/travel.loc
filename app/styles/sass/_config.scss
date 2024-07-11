@@ -31,9 +31,9 @@ $gutter: $grid-gutter-width;
   }
 }
 
-@include font('jost-light', normal, 400, '../fonts/jost-light.woff2');
+@include font('unbounded-light', normal, 400, '../fonts/unbounded-light.woff2');
 @include font('unbounded', normal, 400, '../fonts/unbounded-regular.woff2');
-@include font('jost-medium', normal, 400, '../fonts/jost-medium.woff2');
+@include font('unbounded-medium', normal, 400, '../fonts/unbounded-medium.woff2');
 @include font('unbounded-bold', normal, 400, '../fonts/unbounded-bold.woff2');
 
 // GENERAL DOCUMENT STYLES

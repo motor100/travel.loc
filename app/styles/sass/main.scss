@@ -24,11 +24,11 @@ button, button:focus, button:active {
 img {
   border-style: none;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+// ul {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
 .full-link {
   position: absolute;
   top: 0;
@@ -76,6 +76,7 @@ ul {
   padding: 0 0 120px 0;
 }
 .section-title {
+  margin: 0 0 30px 0;
   font-family: 'unbounded-bold';
   font-size: 64px;
   text-transform: uppercase;
@@ -133,12 +134,148 @@ ul {
 }
 
 
-
 .why-we {
   .advantages {
-    background-color: #10171B;
+    padding: 60px 0 30px 0;
+    background-color: $basiccolor;
+    color: #fff;
+  }
+  .advantages-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantages-item {
+    width: 33%;
+    margin: 0 0 30px 0;
+    padding: 0 20px 0 0;
+  }
+  .advantages-item__title {
+    margin: 0 0 20px 0;
+    font-family: unbounded-medium;
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  .advantages-item__text {
+    font-family: unbounded-light;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+}
+
+
+.off-road-tour {
+  .price {
+    display: flex;
+  }
+  .price-item {
+    position: relative;
+    padding: 50px;
+    color: #fff;
+    z-index: 1;
+  }
+  .price-item__title {
+    margin: 0 0 20px 0;
+    font-family: unbounded-medium;
+    font-size: 42px;
+  }
+  .price-item__text {
+    margin: 0 0 15px 0;
+    font-family: unbounded-light;
+    font-size: 22px;
+  }
+  .textmedium {
+    font-family: unbounded-medium;
+  }
+  .price-item__description {
+    margin: 0 0 15px 0;
+    font-family: unbounded-light;
+    font-size: 14px;
+  }
+  .price-item__include {
+    font-family: unbounded-light;
+    font-size: 22px;
+  }
+  .list {
+    margin: 15px 0 0 0;
+    padding: 0 0 0 20px;
+  }
+  .price-item__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .price-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .book-tour-btn {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 388px;
+    height: 76px;
+    border: none;
+    background-color: $orangecolor;
+    font-family: unbounded-light;
+    font-size: 28px;
+    color: #fff;
+    z-index: 2;
   }
 }
+
+
+.our-cars {
+  .our-cars-item {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding: 0 0 98% 0;
+  }
+  .our-cars-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.gallery {
+  .gallery-item {
+    margin: 0 0 24px 0;
+  }
+  .view-more-btn {
+    margin: 0 0 30px 0;
+    font-family: 'unbounded-bold';
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+.contacts-section {
+  .contacts {
+    padding: 50px;
+    background-color: $basiccolor;
+    color: #fff;
+  }
+  .contacts-title {
+    margin: 0 0 16px 0;
+    font-family: 'unbounded-bold';
+    font-size: 64px;
+    text-transform: uppercase;
+  }
+}
+
+  
 
 
 
