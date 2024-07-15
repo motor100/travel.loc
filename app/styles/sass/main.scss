@@ -92,6 +92,7 @@ img {
   padding: 20px 0;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
+  z-index: 2;
   .logo {
     width: 100px;
   }
@@ -125,18 +126,38 @@ img {
 
 
 .main-section {
-  .temp-image {
-    height: 840px;
+  position: relative;
+  height: 840px;
+  margin: 0 0 45px 0;
+  background: url(/images/main-bg.jpg) center no-repeat;
+  background-size: cover;
+  z-index: 1;
+  .main-title {
+    margin: 0 0 10px 0;
+    padding: 352px 0 0 0;
+    font-family: 'unbounded-bold';
+    font-size: 132px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
-  .temp-image img {
+  .main-subtitle {
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .mountains {
+    position: absolute;
+    left: 0;
+    bottom: -480px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    z-index: 2;
   }
 }
 
 
 .why-we {
+  position: relative;
+  z-index: 3;
   .advantages {
     padding: 60px 0 30px 0;
     background-color: $basiccolor;
@@ -249,8 +270,8 @@ img {
   }
 }
 
-
 .gallery {
+  margin: 0 0 100px 0;
   .gallery-item {
     margin: 0 0 24px 0;
   }
@@ -263,8 +284,8 @@ img {
   }
 }
 
-
 .contacts-section {
+  padding: 20px 0 0 0;
   .team {
     height: 100%;
   }
@@ -288,15 +309,18 @@ img {
     margin: 0 0 30px 0;
     font-size: 32px;
   }
-  .address,
-  .phone {
+  .address {
     font-size: 32px;
   }
   .address {
     margin: 0 0 20px 0;
   }
   .phone {
+    display: block;
+    width: max-content;
     margin: 0 0 40px 0;
+    font-size: 32px;
+    color: #fff;
   }
   .messengers {
     display: flex;
@@ -322,7 +346,6 @@ img {
   }
   
 }
-
   
 .footer {
   margin: 110px 0 0 0;
