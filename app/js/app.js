@@ -1,14 +1,11 @@
 // import Swiper, { Navigation } from 'swiper';
 // import AirDatepicker from 'air-datepicker';
 // import PhotoSwipeLightbox from 'photoswipe/lightbox';
-// import IMask from 'imask';
+import IMask from 'imask';
 
 
 // Общие переменные
-let body = document.querySelector('body'),
-    now = new Date(),
-    year = now.getFullYear();
-
+const body = document.querySelector('body');
 
 
 // Guest input digits only
@@ -169,15 +166,18 @@ function ajaxSend(form) {
 
 
 // Input mask
-let elementPhone = document.querySelector('#callback-phone');
+const elementPhone = document.querySelector('#callback-phone');
 
-let maskOptionsPhone = {
+const maskOptionsPhone = {
   mask: '+{7} (000) 000 00 00'
 };
 
-let mask = IMask(elementPhone, maskOptionsPhone);
+const mask = IMask(elementPhone, maskOptionsPhone);
 
 
 // Current year
-let footerCityYear = document.querySelector('.city-year');
-footerCityYear.innerText = 'Миасс ' + year;
+const now = new Date();
+const year = now.getFullYear();
+
+const currentYear = document.getElementById('current-year');
+currentYear.innerText = year;

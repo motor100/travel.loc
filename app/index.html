@@ -17,7 +17,9 @@
       <div class="row">
         <div class="col-md-1">
           <div class="logo">
-            <img src="/images/logo.png" alt="">
+            <a href="/" class="logo-link">
+              <img src="/images/logo.png" class="logo-image" alt="">
+            </a>
           </div>
         </div>
         <div class="col-md-10">
@@ -119,7 +121,7 @@
               <li class="list-item">Страхование от НС</li>
             </ul>
           </div>
-          <button class="book-tour-btn">забронировать тур</button>
+          <button class="book-tour-btn js-callback-btn">забронировать тур</button>
           <div class="price-item__image">
             <img src="/images/public-bg.jpg" alt="">
           </div>
@@ -139,7 +141,7 @@
               <li class="list-item">Страхование от НС</li>
             </ul>
           </div>
-          <button class="book-tour-btn">забронировать тур</button>
+          <button class="book-tour-btn js-callback-btn">забронировать тур</button>
           <div class="price-item__image">
             <img src="/images/private-bg.jpg" alt="">
           </div>
@@ -222,6 +224,25 @@
         <div class="col-md-7">
           <div class="contacts">
             <div class="contacts-title">Контакты</div>
+            <div class="write-us">напишите нам</div>
+            <div class="address">г.Миасс, пр. Макеева 24</div>
+            <div class="phone">+7 932 302 37 00</div>
+            <div class="messengers">
+              <div class="messenger-item viber">
+                <div class="flex-container">
+                  <span class="title">Viber</span>
+                  <img src="/images/arrow-circle-right.svg" alt="">
+                </div>
+                <a href="viber://chat?number=%2b793230237700" class="full-link"></a>
+              </div>
+              <div class="messenger-item telegram">
+                <div class="flex-container">
+                  <span class="title">Telegram</span>
+                  <img src="/images/arrow-circle-right.svg" class="arrow" alt="">
+                </div>
+                <a href="https://t.me/Mybuttonon" class="full-link"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -229,8 +250,55 @@
   </div>
 
 
-  <footer class="footer section">
-
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="footer-top">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="logo">
+              <img src="/images/logo-footer.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-11">
+            <div class="bottom-menu">
+              <div class="menu-item">
+                <a href="#" class="menu-item__link">Почему мы</a>
+              </div>
+              <div class="menu-item">
+                <a href="#" class="menu-item__link">Туры</a>
+              </div>
+              <div class="menu-item">
+                <a href="#" class="menu-item__link">Автопарк</a>
+              </div>
+              <div class="menu-item">
+                <a href="#" class="menu-item__link">Контакты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="copyright">&copy; "Туры по Уралу" <span id="current-year"></span></div>
+            <div class="about-company">ИП Красняк Л.Н. ИНН 741807167621</div>
+          </div>
+          <div class="col-md-6">
+            <div class="privacy-policy-wrapper">
+              <span class="privacy-policy privacy-policy-btn">Политика обработки персональных данных</span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="developer">
+              <a href="https://mybutton.ru" target="_blank">Разработчик Студия Button</a>
+            </div>
+            <div class="developer">
+              <a href="https://nhfuture.ru/" target="_blank">Дизайн Andrewwebnh</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- mobile menu -->
@@ -286,9 +354,7 @@
           <label for="callback-name" class="label">Ваше имя</label>
           <input type="text" id="callback-name" class="name input-field first-input-field" name="name" minlength="3" maxlength="20" required>
           <label for="callback-phone" class="label">Ваш телефон</label>
-          <input type="text" id="callback-phone" class="phone input-field" name="phone" required minlength="3" maxlength="30">
-          <input type="hidden" id="modal-start-date" name="start-date" value="">
-          <input type="hidden" id="modal-guest" name="guest" value="">
+          <input type="text" id="callback-phone" class="phone input-field" name="phone" required minlength="17" maxlength="19">
           <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
           <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
           <span class="checkbox-text">

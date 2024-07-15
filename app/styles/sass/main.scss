@@ -95,6 +95,9 @@ img {
   .logo {
     width: 100px;
   }
+  .logo-link {
+    display: block;
+  }
   .logo img {
     width: 100%;
   }
@@ -109,7 +112,6 @@ img {
     margin: 0 30px;
   }
   .menu-item__link {
-    font-family: 'Unbounded';
     font-size: 24px;
     color: $textcolor;
     line-height: 1.3;
@@ -224,6 +226,7 @@ img {
     font-family: unbounded-light;
     font-size: 28px;
     color: #fff;
+    cursor: pointer;
     z-index: 2;
   }
 }
@@ -262,21 +265,121 @@ img {
 
 
 .contacts-section {
+  .team {
+    height: 100%;
+  }
+  .team img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .contacts {
-    padding: 50px;
+    padding: 40px 50px;
     background-color: $basiccolor;
     color: #fff;
   }
   .contacts-title {
-    margin: 0 0 16px 0;
+    margin: 0 0 11px 0;
     font-family: 'unbounded-bold';
     font-size: 64px;
     text-transform: uppercase;
   }
+  .write-us {
+    margin: 0 0 30px 0;
+    font-size: 32px;
+  }
+  .address,
+  .phone {
+    font-size: 32px;
+  }
+  .address {
+    margin: 0 0 20px 0;
+  }
+  .phone {
+    margin: 0 0 40px 0;
+  }
+  .messengers {
+    display: flex;
+  }
+  .messenger-item {
+    position: relative;
+    padding: 0 25px;
+    width: 375px;
+    height: 120px;
+    background-color: $greencolor;
+  }
+  .viber {
+    margin: 0 40px 0 0;
+  }
+  .flex-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 32px;
+  }
+  
 }
 
   
-
+.footer {
+  margin: 110px 0 0 0;
+  padding: 90px 0 40px 0;
+  background-color: $basiccolor;
+  .footer-top {
+    margin: 0 0 36px 0;
+  }
+  .logo {
+    width: 100%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .bottom-menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .menu-item {
+    margin: 0 20px;
+  }
+  .menu-item:first-child {
+    margin-left: 0;
+  }
+  .menu-item__link {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.3;
+    text-transform: uppercase;
+    transition: color .3s;
+  }
+  .menu-item__link:hover {
+    color: $orangecolor;
+  }
+  .footer-bottom {
+    font-family: unbounded-light;
+    font-size: 12px;
+    color: #fff;
+    line-height: 2.5;
+  }
+  .copyright {
+    text-transform: uppercase;
+  }
+  .privacy-policy-wrapper {
+    text-align: center;
+  }
+  .privacy-policy {
+    cursor: pointer;
+  }
+  .developer {
+    text-align: right;
+  }
+  .developer a {
+    color: #fff;
+  }
+}
 
 
 
