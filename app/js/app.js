@@ -19,9 +19,9 @@ if (inputDigitsOnly) {
 
 
 // Мобильное меню
-let burgerMenuWrapper = document.querySelector('.burger-menu-wrapper'),
-    mobileMenu = document.querySelector('.mobile-menu'),
-    burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
+const mobileMenu = document.querySelector('.mobile-menu');
+const burgerMenu = document.querySelector('.burger-menu');
 
 burgerMenuWrapper.onclick = function () {
   body.classList.toggle('overflow-hidden');
@@ -50,7 +50,7 @@ function closeMenu () {
 
 // Окна
 let callbackBtn = document.querySelectorAll('.js-callback-btn'),
-    mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn'),
+    // mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn'),
     callbackModal = document.querySelector('#callback-modal'),
     privacyPolicyBtn = document.querySelectorAll('.privacy-policy-btn'),
     privacyPolicyModal = document.querySelector('#privacy-policy-modal'),
@@ -71,10 +71,10 @@ for (let i = 0; i < privacyPolicyBtn.length; i++) {
   }
 }
 
-mobileMenuCallbackBtn.onclick = function() {
-  closeMenu();
-  modalOpen(callbackModal);
-}
+// mobileMenuCallbackBtn.onclick = function() {
+//   closeMenu();
+//   modalOpen(callbackModal);
+// }
 
 function modalOpen(win) {
   body.classList.add('overflow-hidden');
