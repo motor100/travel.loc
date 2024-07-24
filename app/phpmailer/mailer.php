@@ -13,7 +13,7 @@ if (isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["checkbox"])
     require 'SMTP.php';
     require 'config.php';
 
-    $mail = new PHPMailer;
+    $mail = new PHPMailer();
     $mail->CharSet = 'UTF-8';
 
     // Настройки SMTP
@@ -34,7 +34,7 @@ if (isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["checkbox"])
     $mail->addAddress($To, 'admin');
 
     // Тема письма
-    $mail->Subject = 'Заявка с сайта Гостиница Миасс';
+    $mail->Subject = 'Заявка с сайта Туры на внедорожниках';
 
     $mail->isHTML(true);
 

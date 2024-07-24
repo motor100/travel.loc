@@ -9,13 +9,12 @@ const body = document.querySelector('body');
 
 
 // Guest input digits only
-let inputDigitsOnly = document.querySelector('#guest');
-if (inputDigitsOnly) {
-  inputDigitsOnly.oninput = function() {
-    this.value = this.value.replace(/[^1-9\.]/g, '');
-  }
-}
-
+// let inputDigitsOnly = document.querySelector('#guest');
+// if (inputDigitsOnly) {
+//   inputDigitsOnly.oninput = function() {
+//     this.value = this.value.replace(/[^1-9\.]/g, '');
+//   }
+// }
 
 
 // Мобильное меню
@@ -181,3 +180,39 @@ const year = now.getFullYear();
 
 const currentYear = document.getElementById('current-year');
 currentYear.innerText = year;
+
+
+// Set cookie
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+
+function checkCookies() {
+  let cookieNote = document.querySelector('#cookie_note');
+  let cookieBtnAccept = cookieNote.querySelector('#cookie_accept');
+
+  // Если куки we-use-cookie нет или она просрочена, то показываем уведомление
+  if (!getCookie('we-use-cookie')) {
+    cookieNote.classList.add('show');
+  }
+
+  // При клике на кнопку устанавливаем куку we-use-cookie на один год
+  cookieBtnAccept.addEventListener('click', function () {
+    setCookie('we-use-cookie', 'true', 365);
+    cookieNote.classList.remove('show');
+  });
+}
+
+checkCookies();
