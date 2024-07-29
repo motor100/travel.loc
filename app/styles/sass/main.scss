@@ -97,9 +97,9 @@ img {
   .logo {
     width: 100px;
   }
-  .logo-link {
-    display: block;
-  }
+  // .logo-link {
+  //   display: block;
+  // }
   .logo img {
     width: 100%;
   }
@@ -190,10 +190,17 @@ img {
     display: flex;
   }
   .price-item {
-    position: relative;
+    // position: relative;
     padding: 50px;
     color: #fff;
-    z-index: 1;
+    // z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .price-item__content {
+    margin: 0 0 30px 0;
   }
   .price-item__title {
     margin: 0 0 20px 0;
@@ -221,25 +228,34 @@ img {
     margin: 15px 0 0 0;
     padding: 0 0 0 20px;
   }
-  .price-item__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  .price-item-public {
+    background: url(../images/public-bg.jpg) center no-repeat;
+    background-size: cover;
+
   }
-  .price-item__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .price-item-private {
+    background: url(../images/private-bg.jpg) center no-repeat;
+    background-size: cover;
+
   }
+  // .price-item__image {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: -1;
+  // }
+  // .price-item__image img {
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
   .book-tour-btn {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
+    display: block;
     width: 388px;
     height: 76px;
+    padding: 0;
     border: none;
     background-color: $orangecolor;
     font-family: unbounded-light;
@@ -495,8 +511,14 @@ img {
   z-index: 9;
   transition: all 1s;
   .logo {
-    width: 82px;
+    width: 100px;
     margin: 0 0 50px 0;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .logo-link {
+    display: block;
   }
   .menu {
     margin: 0 0 40px 0;
