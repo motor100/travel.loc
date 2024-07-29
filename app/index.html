@@ -69,40 +69,43 @@
           </div>
           <div class="advantages-item">
             <div class="advantages-item__image">
-              <img src="/images/shield-check.svg" alt="">
+              <img src="/images/sofa.svg" alt="">
             </div>
             <div class="advantages-item__title">Комфорт</div>
             <div class="advantages-item__text">Нейросеть - генератор текста, а не человек. Несмотря на многочисленные преимущества, нейросети имеют некоторые ограничения.</div>
           </div>
           <div class="advantages-item">
             <div class="advantages-item__image">
-              <img src="/images/shield-check.svg" alt="">
+              <img src="/images/smile.svg" alt="">
             </div>
             <div class="advantages-item__title">Море впечатлений</div>
             <div class="advantages-item__text">Генератор текста (для написания используется нейросеть) помогает быстро создать уникальный текст онлайн.</div>
           </div>
           <div class="advantages-item">
             <div class="advantages-item__image">
-              <img src="/images/shield-check.svg" alt="">
+              <img src="/images/car.svg" alt="">
             </div>
             <div class="advantages-item__title">Собственный парк</div>
             <div class="advantages-item__text">Онлайн-генератор случайного текста, правильный Lorem Ipsum на русском языке. Незаменимый помощник любого дизайнера, вебмастера и проектировщика.</div>
           </div>
           <div class="advantages-item">
             <div class="advantages-item__image">
-              <img src="/images/shield-check.svg" alt="">
+              <img src="/images/mountains.svg" alt="">
             </div>
             <div class="advantages-item__title">Уникальные туры</div>
             <div class="advantages-item__text">Нейросеть онлайн — это интернет-сервис, где ИИ отвечает на запросы людей, генерирует текст и создает уникальный контент. У нее максимально широкие возможности.</div>
           </div>
           <div class="advantages-item">
             <div class="advantages-item__image">
-              <img src="/images/shield-check.svg" alt="">
+              <img src="/images/drivers.svg" alt="">
             </div>
             <div class="advantages-item__title">Опытные водители</div>
             <div class="advantages-item__text">AI Wiz, нейросеть для создания текстов, пишет, переписывает и создает релевантный контент всего за пару кликов.</div>
           </div>
         </div>
+      </div>
+      <div class="car-grey-bg">
+        <img src="/images/car-grey-bg.png" alt="">
       </div>
     </div>
   </div>
@@ -360,24 +363,36 @@
     </div>
   </div>
   
-  <div id="callback-modal" class="modal-window callback-modal">
-    <div class="modal-wrapper">
+  <div id="callback-modal" class="modal-window callback-modal" style="display: block;">
+    <div class="modal-wrapper active">
       <div class="modal-area">
         <div class="modal-close">
           <div class="close"></div>
         </div>
-        <div class="modal-title">Заполните форму</div>
-        <form id="callback-modal-form" class="form" method="post">
-          <label for="callback-name" class="label">Ваше имя</label>
-          <input type="text" id="callback-name" class="name input-field first-input-field" autocomplete="on" name="name" minlength="3" maxlength="20" required>
-          <label for="callback-phone" class="label">Ваш телефон</label>
-          <input type="text" id="callback-phone" class="phone input-field" name="phone" autocomplete="on" minlength="17" maxlength="19" required>
-          <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
-          <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
-          <span class="checkbox-text">
-            Согласен с <span class="privacy-policy-btn" target="_blank">политикой обработки персональных данных</span></span>
-          <input type="button" class="submit-btn js-callback-modal-btn" value="Отправить">
-        </form>
+
+        <div class="flex-container">
+          <div class="title-wrapper">
+            <div class="title">Оставьте свои данные для <span class="orangecolor">брони тура</span></div>
+            <div class="subtitle">После отправки данных с вами свяжется менеджер и уточнит все детали</div>
+          </div>
+          <form id="callback-modal-form" class="form" method="post">
+            <input type="text" id="callback-name" class="name input-field first-input-field" autocomplete="on" name="name" minlength="3" maxlength="20" required placeholder="имя">
+            <input type="text" id="callback-phone" class="phone input-field" name="phone" autocomplete="on" minlength="17" maxlength="19" required placeholder="номер телефона">
+            <div class="form-group">
+              <input type="checkbox" name="messenger">
+              <input type="checkbox" name="messenger">
+            </div>
+
+            <input type="number" id="callback-quantity" class="phone input-number input-field" name="quantity" min="1" max="20" placeholder="количество людей">
+            
+            
+            <button type="button" class="submit-btn js-callback-modal-btn">забронировать тур</button>
+
+            <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
+            <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
+            <span class="checkbox-text">Согласен с <span class="privacy-policy-btn" target="_blank">политикой обработки персональных данных</span></span>
+          </form>
+        </div>
       </div>
     </div>
   </div>

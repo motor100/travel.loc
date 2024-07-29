@@ -158,6 +158,7 @@ img {
   position: relative;
   z-index: 3;
   .advantages {
+    position: relative;
     padding: 60px 0 30px 0;
     background-color: $basiccolor;
     color: #fff;
@@ -182,7 +183,21 @@ img {
     font-size: 22px;
     line-height: 1.3;
   }
-
+  .car-grey-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 36%;
+    height: 65%;
+    margin: auto;
+  }
+  .car-grey-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .off-road-tour-section {
@@ -587,7 +602,7 @@ img {
     right: 0;
     top: 5%;
     height: 100%;
-    padding: 0 12px;
+    padding: 0 80px;
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
@@ -598,7 +613,7 @@ img {
   }
   .modal-area {
     position: relative;
-    max-width: 425px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 64px 50px 64px;
     border-radius: 15px;
@@ -653,38 +668,51 @@ img {
   .input-field {
     width: 100%;
     margin: 0 0 25px 0;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid #A9A9A9;
-    border-left: none;
+    padding: 25px 30px;
+    border: 1px solid #DEDEDE;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 24px;
   }
+  .input-number {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  .input-number::-webkit-inner-spin-button,
+  .input-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+
   .first-input-field {
     margin: 0 0 35px 0;
   }
   .checkbox-text {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 12px;
+    font-family: unbounded-light;
+    font-size: 18px;
+    color: $textcolor;
     line-height: 1.4;
   }
   .privacy-policy-btn {
-    color: #211F1F;
-    text-decoration: underline;
+    color: $orangecolor;
     cursor: pointer;
   }
   .submit-btn {
     display: block;
     width: 100%;
-    height: 64px;
+    height: 76px;
+    margin: 0 0 20px 0;
     padding: 0;
     border: none;
-    border-radius: 30px;
-    background-color: #211F1F;
-    font-size: 20px;
+    background-color: $orangecolor;
+    font-family: unbounded-light;
+    font-size: 28px;
     color: #fff;
-    text-transform: uppercase;
     cursor: pointer;
   }
   .submit-btn:disabled {
@@ -719,10 +747,38 @@ img {
   }
 }
 
+// Callback modal
+.callback-modal {
+  .modal-area {
+    height: 100%;
+    padding: 50px 64px;
+    background: url(../images/modal-bg.jpg) top no-repeat;
+    background-size: cover;
+  }
+  .flex-container {
+    display: flex;
+  }
+  .title-wrapper,
+  .form {
+    width: 50%;
+  }
+  .title {
+    margin: 0 0 20px 0;
+    font-family: 'unbounded-bold';
+    font-size: 64px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-family: unbounded-light;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
 // Privacy policy modal
 .privacy-policy-modal {
   .modal-area {
-    max-width: 100%;
     max-height: auto;
     height: 90%;
   }
