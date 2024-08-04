@@ -103,6 +103,11 @@ img {
   .logo img {
     width: 100%;
   }
+  &.header-white {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+  }
   .top-menu {
     display: flex;
     width: max-content;
@@ -390,6 +395,7 @@ img {
   }
   .arrow {
     width: 75px;
+    flex-shrink: 0;
   }
 }
 
@@ -445,8 +451,8 @@ img {
   .privacy-policy-wrapper {
     text-align: center;
   }
-  .privacy-policy {
-    cursor: pointer;
+  .privacy-policy-btn {
+    color: #fff;
   }
   .developer {
     text-align: right;
@@ -696,7 +702,6 @@ img {
   }
   .privacy-policy-btn {
     color: $orangecolor;
-    cursor: pointer;
   }
   .submit-btn {
     display: block;

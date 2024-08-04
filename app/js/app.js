@@ -48,13 +48,13 @@ function closeMenu () {
 }
 
 // Окна
-let callbackBtn = document.querySelectorAll('.js-callback-btn'),
-    // mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn'),
-    callbackModal = document.querySelector('#callback-modal'),
-    privacyPolicyBtn = document.querySelectorAll('.privacy-policy-btn'),
-    privacyPolicyModal = document.querySelector('#privacy-policy-modal'),
-    modalWindow = document.querySelectorAll('.modal-window'),
-    modalCloseBtn = document.querySelectorAll('.modal-window .modal-close');
+const callbackBtn = document.querySelectorAll('.js-callback-btn');
+// const mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn');
+const callbackModal = document.querySelector('#callback-modal');
+// const privacyPolicyBtn = document.querySelectorAll('.privacy-policy-btn');
+// const privacyPolicyModal = document.querySelector('#privacy-policy-modal');
+const modalWindow = document.querySelectorAll('.modal-window');
+const modalCloseBtn = document.querySelectorAll('.modal-window .modal-close');
 
 // Открытие окна обратной связи
 for (let i = 0; i < callbackBtn.length; i++) {
@@ -64,11 +64,11 @@ for (let i = 0; i < callbackBtn.length; i++) {
 }
 
 // Открытие окна политики
-for (let i = 0; i < privacyPolicyBtn.length; i++) {
-  privacyPolicyBtn[i].onclick = function() {
-    modalOpen(privacyPolicyModal);
-  }
-}
+// for (let i = 0; i < privacyPolicyBtn.length; i++) {
+//   privacyPolicyBtn[i].onclick = function() {
+//     modalOpen(privacyPolicyModal);
+//   }
+// }
 
 // mobileMenuCallbackBtn.onclick = function() {
 //   closeMenu();
@@ -190,7 +190,7 @@ function setCookie(name, value, days) {
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     expires = "; expires=" + date.toUTCString();
   }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/" + "; sameSite=Lax;" + "; sameSite=Lax;";
+  document.cookie = name + "=" + (value || "") + expires + "; path=/" + "; sameSite=Lax;";
 }
 
 function getCookie(name) {
