@@ -97,9 +97,6 @@ img {
   .logo {
     width: 100px;
   }
-  // .logo-link {
-  //   display: block;
-  // }
   .logo img {
     width: 100%;
   }
@@ -187,21 +184,6 @@ img {
     font-family: unbounded-light;
     font-size: 22px;
     line-height: 1.3;
-  }
-  .car-grey-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 36%;
-    height: 65%;
-    margin: auto;
-  }
-  .car-grey-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 }
 
@@ -304,6 +286,20 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.about-section {
+  padding: 80px 0;
+  background-color: $basiccolor;
+  color: #fff;
+  .description {
+    font-family: unbounded-light;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .first-description {
+    margin: 0 0 30px 0;
   }
 }
 
@@ -951,6 +947,13 @@ img {
     font-size: 50px;
   }
 
+  .about-section {
+    padding: 60px 0;
+    .description {
+      font-size: 22px;
+    }
+  }
+
   .gallery-section {
     margin: 0 0 60px 0;
     .view-more-btn {
@@ -1025,7 +1028,6 @@ img {
       font-size: 14px;
     }
   }
-
 }
 
 @media only screen and (max-width : 992px) {
@@ -1040,6 +1042,13 @@ img {
   .section-title {
     margin: 0 0 20px 0;
     font-size: 46px;
+  }
+
+  .about-section {
+    padding: 40px 0;
+    .description {
+      font-size: 20px;
+    }
   }
 
   .gallery-section {
@@ -1165,6 +1174,12 @@ img {
     font-size: 36px;
   }
 
+  .about-section {
+    .description {
+      font-size: 18px;
+    }
+  }
+
   .contacts-section {
     .container-fluid {
       padding: 0;
@@ -1219,10 +1234,6 @@ img {
       height: 82%;
     }
   }
-
-  .callback-modal {
-
-  }
 }
 
 @media only screen and (max-width : 576px) {
@@ -1245,6 +1256,12 @@ img {
   }
   .section-title {
     font-size: 30px;
+  }
+
+  .about-section {
+    .description {
+      font-size: 15px;
+    }
   }
 
   .contacts-section {
