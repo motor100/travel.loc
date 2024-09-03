@@ -24,11 +24,6 @@ button, button:focus, button:active {
 img {
   border-style: none;
 }
-// ul {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
 .full-link {
   position: absolute;
   top: 0;
@@ -72,12 +67,7 @@ img {
 .greencolor {
   color: $greencolor;
 }
-// .section {
-//   margin: 0 0 100px 0;
-//   padding: 20px 0 0 0;
-// }
 .section {
-  // margin: 0 0 100px 0;
   padding: 80px 0 50px 0;
 }
 .section-title {
@@ -95,7 +85,7 @@ img {
   right: 0;
   width: 100%;
   padding: 20px 0;
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   z-index: 2;
   .logo {
@@ -106,7 +96,7 @@ img {
   }
   &.header-white {
     position: static;
-    background: none;
+    background-color: #fff;
     backdrop-filter: none;
   }
   .top-menu {
@@ -143,6 +133,7 @@ img {
     padding: 352px 0 0 0;
     font-family: 'unbounded-bold';
     font-size: 132px;
+    line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -168,15 +159,6 @@ img {
     background-color: $basiccolor;
     color: #fff;
   }
-  // .advantages-items {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
-  // .advantages-item {
-  //   width: 33%;
-  //   margin: 0 0 40px 0;
-  //   padding: 0 20px 0 0;
-  // }
   .advantages-item {
     margin: 0 0 40px 0;
   }
@@ -206,7 +188,6 @@ img {
     width: 50%;
     padding: 50px;
     color: #fff;
-    // z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -251,19 +232,6 @@ img {
     background-size: cover;
 
   }
-  // .price-item__image {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   z-index: -1;
-  // }
-  // .price-item__image img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  // }
   .book-tour-btn {
     display: block;
     width: 388px;
@@ -472,17 +440,15 @@ img {
 // mobile menu 
 .burger-menu-wrapper {
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 20px;
   display: none;
   width: 56px;
   height: 56px;
   padding: 7px;
+  background-color: #fff;
   cursor: pointer;
   z-index: 10;
-  &.active {
-    background-color: transparent;
-  }
   .burger-menu {
     position: relative;
     height: 100%;
@@ -526,7 +492,7 @@ img {
   }
 }
 
-// mobile mwnu
+// mobile menu
 .mobile-menu {
   display: none;
   position: fixed;
@@ -534,14 +500,14 @@ img {
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 20px;
+  padding: 18px 12px 20px 12px;
   background-color: #fff;
   opacity: 0;
   visibility: hidden;
   z-index: 9;
   transition: all 1s;
   .logo {
-    width: 100px;
+    width: 80px;
     margin: 0 0 50px 0;
   }
   .logo img {
@@ -886,16 +852,38 @@ img {
   }
 }
 
+@media only screen and (max-width : 1600px) {
+  .main-section {
+    .main-title {
+      font-size: 122px;
+    }
+  }
+}
+
+@media only screen and (max-width : 1500px) {
+  .main-section {
+    .main-title {
+      font-size: 113px;
+    }
+  }
+}
 
 @media only screen and (max-width : 1400px) {
-  // .section {
-  //   margin: 0 0 80px 0;
-  // }
   .section {
     padding: 70px 0 40px 0;
   }
+
   .section-title {
     font-size: 58px;
+  }
+
+  .main-section {
+    .main-title {
+      font-size: 96px;
+    }
+    .main-subtitle {
+      font-size: 32px;
+    }
   }
 
   .why-we-section {
@@ -985,14 +973,40 @@ img {
 }
 
 @media only screen and (max-width : 1200px) {
-  // .section {
-  //   margin: 0 0 60px 0;
-  // }
   .section {
     padding: 60px 0 30px 0;
   }
+
   .section-title {
     font-size: 50px;
+  }
+
+  .header {
+    .menu-item {
+      margin: 0 20px;
+    }
+    .menu-item:first-child {
+      margin-left: 0;
+    }
+    .menu-item:last-child {
+      margin-right: 0;
+    }
+    .menu-item__link {
+      font-size: 22px;
+    }
+  }
+
+  .main-section {
+    height: 740px;
+    margin: 0 0 35px 0;
+    .main-title {
+      padding: 302px 0 0;
+      font-size: 75px;
+    }
+    .main-subtitle {
+      font-size: 28px;
+    }
+
   }
 
   .why-we-section {
@@ -1123,9 +1137,6 @@ img {
     --bs-gutter-x: 24px;
   }
 
-  // .section {
-  //   margin: 0 0 40px 0;
-  // }
   .section {
     padding: 50px 0 20px 0;
   }
@@ -1133,6 +1144,24 @@ img {
   .section-title {
     margin: 0 0 20px 0;
     font-size: 46px;
+  }
+
+  .header {
+    .logo {
+      width: 80px;
+    }
+    .menu-item__link {
+      font-size: 19px;
+    }
+  }
+
+  .main-section {
+    height: 100%;
+    margin: 0;
+    .main-subtitle {
+      padding: 0 0 200px 0;
+      font-size: 25px;
+    }
   }
 
   .why-we-section {
@@ -1309,6 +1338,23 @@ img {
     font-size: 36px;
   }
 
+  .header {
+    padding: 18px 0;
+    background-color: #fff;
+    backdrop-filter: none;
+  }
+
+  .main-section {
+    .main-title {
+      padding: 220px 0 0 0;
+      font-size: 70px;
+    }
+    .main-subtitle {
+      padding: 0 0 160px 0;
+      font-size: 18px;
+    }
+  }
+
   .off-road-tour-section {
     .price-item {
       padding: 25px 25px 50px 25px;
@@ -1406,6 +1452,13 @@ img {
     padding: 40px 0 20px 0;
   }
 
+  .main-section {
+    .main-title {
+      padding: 190px 0 0 0;
+      font-size: 65px;
+    }
+  }
+
   .why-we-section {
     .advantages {
       padding: 40px 0 5px 0;
@@ -1432,35 +1485,23 @@ img {
 }
 
 @media only screen and (max-width : 480px) {
-  // .section {
-  //   margin: 40px 0;
-  // }
   .section-title {
     font-size: 27px;
+  }
+
+  .main-section {
+    .main-title {
+      font-size: 60px;
+    }
+    .main-subtitle {
+      padding: 0 0 140px 0;
+    }
   }
 
   .why-we-section {
     .advantages-item__image {
       height: 40px;
     }
-    // .shieldcheck svg {
-    //   width: 45px;
-    // }
-    // .sofa svg {
-    //   width: 50px;
-    // }
-    // .smile svg {
-    //   width: 45px;
-    // }
-    // .car svg {
-    //   width: 75px;
-    // }
-    // .mountains svg {
-    //   width: 60px;
-    // }
-    // .drivers svg {
-    //   width: 60px;
-    // }
   }
 
   .off-road-tour-section {
@@ -1523,7 +1564,17 @@ img {
     font-size: 24px;
   }
 
+  .main-section {
+    .main-title {
+      font-size: 55px;
+    }
+    .main-subtitle {
+      padding: 0 0 130px 0;
+    }
+  }
+
   .why-we-section {
+    margin-top: 0;
     .advantages-item__title {
       font-size: 20px;
     }
