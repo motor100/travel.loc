@@ -145,10 +145,16 @@ img {
   .mountains {
     position: absolute;
     left: 0;
-    bottom: -480px;
+    bottom: -470px;
     width: 100%;
+    height: 690px;
+    background-image: url(../images/mountains-bg-1920.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 2;
   }
+
 }
 
 .why-we-section {
@@ -298,11 +304,16 @@ img {
     object-fit: cover;
   }
   .view-more-btn {
-    margin: 0 0 30px 0;
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 0 5px;
+    border: none;
+    background-color: #fff;
     font-family: 'unbounded-bold';
     font-size: 50px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -508,7 +519,7 @@ img {
   transition: all 1s;
   .logo {
     width: 80px;
-    margin: 0 0 50px 0;
+    margin: 0 0 35px 0;
   }
   .logo img {
     width: 100%;
@@ -517,13 +528,13 @@ img {
     display: block;
   }
   .menu {
-    margin: 0 0 60px 0;
+    margin: 0 0 50px 0;
   }
   .menu-item {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
   }
   .menu-item a {
-    font-size: 24px;
+    font-size: 22px;
     color: $textcolor;
     text-transform: uppercase;
   }
@@ -918,7 +929,7 @@ img {
   }
 
   .gallery-section {
-    margin: 0 0 80px 0;
+    // margin: 0 0 80px 0;
     .view-more-btn {
       font-size: 40px;
     }
@@ -1006,7 +1017,11 @@ img {
     .main-subtitle {
       font-size: 28px;
     }
-
+    .mountains {
+      bottom: -450px;
+      height: 620px;
+      background-image: url(../images/mountains-bg-1200.png);
+    }
   }
 
   .why-we-section {
@@ -1057,7 +1072,7 @@ img {
   }
 
   .gallery-section {
-    margin: 0 0 60px 0;
+    // margin: 0 0 60px 0;
     .view-more-btn {
       font-size: 34px;
     }
@@ -1161,6 +1176,10 @@ img {
     .main-subtitle {
       padding: 0 0 200px 0;
       font-size: 25px;
+    }
+    .mountains {
+      bottom: -450px;
+      height: 620px;
     }
   }
 
@@ -1353,6 +1372,10 @@ img {
       padding: 0 0 160px 0;
       font-size: 18px;
     }
+    .mountains {
+      height: 590px;
+      background-image: url(../images/mountains-bg-768.png);
+    }
   }
 
   .off-road-tour-section {
@@ -1392,7 +1415,10 @@ img {
 
   .contacts-section {
     .container-fluid {
-      padding: 0;
+      --bs-gutter-x: 0;
+    }
+    .row {
+      --bs-gutter-x: 0;
     }
     .contacts {
       padding: 40px 12px;
@@ -1457,11 +1483,14 @@ img {
       padding: 190px 0 0 0;
       font-size: 65px;
     }
+    .mountains {
+      background-image: url(../images/mountains-bg-576.png);
+    }
   }
 
   .why-we-section {
     .advantages {
-      padding: 40px 0 5px 0;
+      padding: 30px 0 5px 0;
     }
     .advantages-item__title {
       height: auto;
@@ -1496,11 +1525,21 @@ img {
     .main-subtitle {
       padding: 0 0 140px 0;
     }
+    .mountains {
+      background-image: url(../images/mountains-bg-480.png);
+    }
   }
 
   .why-we-section {
+    padding-bottom: 0;
     .advantages-item__image {
+      width: 50px;
       height: 40px;
+    }
+    .advantages-item__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -1545,6 +1584,10 @@ img {
     }
   }
 
+  .footer {
+    padding-top: 30px;
+  }
+
   .we-use-cookie {
     .we-use-cookie-text {
       font-size: 10px;
@@ -1557,9 +1600,9 @@ img {
 }
 
 @media only screen and (max-width : 360px) {
-  .section {
-    margin: 30px 0;
-  }
+  // .section {
+  //   margin: 30px 0;
+  // }
   .section-title {
     font-size: 24px;
   }
@@ -1571,14 +1614,18 @@ img {
     .main-subtitle {
       padding: 0 0 130px 0;
     }
-  }
-
-  .why-we-section {
-    margin-top: 0;
-    .advantages-item__title {
-      font-size: 20px;
+    .mountains {
+      background-image: url(../images/mountains-bg-360.png);
     }
   }
+
+  // .why-we-section {
+  // padding-bottom: 0;
+  //   margin-top: 0;
+  //   .advantages-item__title {
+  //     font-size: 20px;
+  //   }
+  // }
 
   .off-road-tour-section {
     .price-item {
