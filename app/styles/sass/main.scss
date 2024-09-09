@@ -307,7 +307,7 @@ img {
     object-fit: cover;
   }
   .view-more-btn {
-    display: block;
+    display: none;
     margin: 0 auto 30px auto;
     padding: 0 5px;
     border: none;
@@ -987,6 +987,17 @@ img {
       font-size: 50px;
     }
   }
+
+  .modal-window {
+    .custom-checkbox + .custom-checkbox-label::before {
+      width: 15px;
+      height: 15px;
+    }  
+    .checkbox-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
 }
 
 @media only screen and (max-width : 1200px) {
@@ -1137,20 +1148,31 @@ img {
       padding: 0 0 0 30px;
     }
     .title {
-      font-size: 40px;
+      font-size: 38px;
     }
     .subtitle {
       font-size: 20px;
     }
     .input-field {
+      font-size: 18px;
+    }
+    .custom-radio + .custom-radio-label {
+      width: 20px;
+      height: 20px;
+    }
+    .custom-radio + .custom-radio-label::before {
+      width: 12px;
+      height: 12px;
+    }  
+    .submit-btn {
       font-size: 20px;
     }
-    .submit-btn {
-      font-size: 22px;
-    }
+  }
+
+  .modal-window {
     .checkbox-text {
       font-size: 14px;
-    }
+    } 
   }
 }
 
@@ -1318,7 +1340,7 @@ img {
     }
     .title {
       margin: 0 0 30px 0;
-      font-size: 38px;
+      font-size: 36px;
       text-align: center;
     }
     .title span {
@@ -1349,11 +1371,13 @@ img {
       height: 56px;
       font-size: 20px;
     }
+  }
+
+  .modal-window {
     .checkbox-text {
       font-size: 12px;
       line-height: 2.2;
     }
-  
   }
 }
 
@@ -1477,12 +1501,64 @@ img {
       margin: 0 12px;
     }
   }
+
+  .callback-modal {
+    .modal-area {
+      padding: 40px 30px 30px 30px;
+    }
+    .title {
+      font-size: 29px;
+    }
+    .input-field {
+      margin: 0 0 15px 0;
+      font-size: 16px;
+    }
+    .subtitle {
+      font-size: 16px;
+    }
+    .form-group {
+      margin: 0 0 15px 0;
+      gap: 25px;
+    }
+    .radio-wrapper {
+      margin: 0;
+    }
+    .radio-text {
+      margin: 0 10px 0 0;
+      font-size: 14px;
+    }
+    .custom-radio + .custom-radio-label {
+      width: 18px;
+      height: 18px;
+    }
+    .custom-radio + .custom-radio-label::before {
+      width: 14px;
+      height: 14px;
+    }    
+    .submit-btn {
+      font-size: 18px;
+    }
+  }
  
   .privacy-policy-modal {
     .modal-area {
       height: 82%;
     }
   }
+
+  .modal-window {
+    .modal-wrapper {
+      padding: 0 60px;
+    }
+    .custom-checkbox + .custom-checkbox-label::before {
+      width: 13px;
+      height: 13px;
+    }
+    .checkbox-text {
+      font-size: 11px;
+      line-height: 1.2;
+    }
+  }    
 }
 
 @media only screen and (max-width : 576px) {
@@ -1523,6 +1599,12 @@ img {
     }
     .we-use-cookie-close {
       width: 73px;
+    }
+  }
+
+  .modal-window { 
+    .modal-wrapper {
+      padding: 0 40px;
     }
   }
 }
@@ -1610,6 +1692,29 @@ img {
     .we-use-cookie-close {
       width: 53px;
       font-size: 14px;
+    }
+  }
+
+  .callback-modal {
+    .title {
+      margin: 0 0 20px 0;
+      font-size: 22px;
+    }
+    .input-field {
+      font-size: 15px;
+    }
+    .subtitle {
+      font-size: 15px;
+    }
+    .submit-btn {
+      height: 50px;
+    }
+  }
+
+  .modal-window { 
+    .modal-wrapper {
+      top: 10px;
+      padding: 0;
     }
   }
 }
