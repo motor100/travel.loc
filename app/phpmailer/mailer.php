@@ -7,6 +7,8 @@ if (isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["checkbox"])
 
     $name = htmlspecialchars($_POST["name"]);
     $phone = htmlspecialchars($_POST["phone"]);
+    $messenger = htmlspecialchars($_POST["messenger"]);
+    $quantity = htmlspecialchars($_POST["quantity"]);
     $checkbox = $_POST["checkbox"];
 
     require 'PHPMailer.php';
@@ -44,8 +46,8 @@ if (isset($_POST["name"]) && isset($_POST["phone"]) && isset($_POST["checkbox"])
       $checkbox) {
 
         // Тело письма
-        $mail->Body = "Имя: $name<br> Телефон: $phone<br>";
-        $mail->AltBody = "Имя: $name\r\n Телефон: $phone\r\n";
+        $mail->Body = "Имя: $name<br> Телефон: $phone<br> Messenger: $messenger<br> Количество людей: $quantity<br>";
+        $mail->AltBody = "Имя: $name\r\n Телефон: $phone\r\n Messenger: $messenger\r\n Количество людей: $quantity\r\n";
 
         $mail->send();
     }

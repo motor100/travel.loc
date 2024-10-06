@@ -1,6 +1,3 @@
-// import Swiper, { Navigation } from 'swiper';
-// import AirDatepicker from 'air-datepicker';
-// import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import IMask from 'imask';
 
 
@@ -8,13 +5,14 @@ import IMask from 'imask';
 const body = document.querySelector('body');
 
 
-// Guest input digits only
-// let inputDigitsOnly = document.querySelector('#guest');
-// if (inputDigitsOnly) {
-//   inputDigitsOnly.oninput = function() {
-//     this.value = this.value.replace(/[^1-9\.]/g, '');
-//   }
-// }
+// Input number only
+const inputNumber = document.querySelector('.js-input-number');
+
+if (inputNumber) {
+  inputNumber.oninput = function() {
+    this.value = this.value.replace(/[^1-9\.]/g, '');
+  }
+}
 
 
 // Мобильное меню
@@ -29,8 +27,10 @@ burgerMenuWrapper.onclick = function () {
   burgerMenu.classList.toggle('close');
 }
 
+
 // закрытие меню при клике на parent элемент
-let listParentClick = document.querySelectorAll('.mobile-menu .menu-item a');
+const listParentClick = document.querySelectorAll('.mobile-menu .menu-item a');
+
 for (let i = 0; i < listParentClick.length; i++) {
   listParentClick[i].onclick = function (event) {
     event.preventDefault();
@@ -47,12 +47,10 @@ function closeMenu () {
   burgerMenu.classList.remove('close');
 }
 
+
 // Окна
 const callbackBtn = document.querySelectorAll('.js-callback-btn');
-// const mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn');
 const callbackModal = document.querySelector('#callback-modal');
-// const privacyPolicyBtn = document.querySelectorAll('.privacy-policy-btn');
-// const privacyPolicyModal = document.querySelector('#privacy-policy-modal');
 const modalWindow = document.querySelectorAll('.modal-window');
 const modalCloseBtn = document.querySelectorAll('.modal-window .modal-close');
 
@@ -62,18 +60,6 @@ for (let i = 0; i < callbackBtn.length; i++) {
     modalOpen(callbackModal);
   }
 }
-
-// Открытие окна политики
-// for (let i = 0; i < privacyPolicyBtn.length; i++) {
-//   privacyPolicyBtn[i].onclick = function() {
-//     modalOpen(privacyPolicyModal);
-//   }
-// }
-
-// mobileMenuCallbackBtn.onclick = function() {
-//   closeMenu();
-//   modalOpen(callbackModal);
-// }
 
 function modalOpen(win) {
   body.classList.add('overflow-hidden');
@@ -107,60 +93,58 @@ function modalClose(win) {
 
 
 // Отправка формы ajax
-let callbackModalForm = document.querySelector("#callback-modal-form"),
-    callbackModalFormBtn = document.querySelector('.js-callback-modal-btn');
+const callbackModalForm = document.querySelector("#callback-modal-form");
+const callbackModalFormBtn = document.querySelector('.js-callback-modal-btn');
 
-if (callbackModalFormBtn) {
-  callbackModalFormBtn.onclick = function(event) {
-    ajaxSend(callbackModalForm);
-  }
-}
+function ajaxCallback(form) {
 
-
-function ajaxSend(form) {  
-  event.preventDefault();
-
-  // Проверка обязательных полей
-  let input = form.querySelectorAll('.input-field');
   let arr = [];
-  for (let i = 0; i < input.length; i++) {
-    let attr = input[i].hasAttribute('required');
-    if (attr && input[i].value == "" ) {
-      input[i].classList.add('required');
-      arr.push(false);
-    }
+
+  const inputName = form.querySelector('.js-required-name');
+  if (inputName.value.length < 3 || inputName.value.length > 20) {
+    inputName.classList.add('required');
+    arr.push(false);
+  } else {
+    inputName.classList.remove('required');
+  }
+
+  const inputPhone = form.querySelector('.js-required-phone');
+  if (inputPhone.value.length != 18) {
+    inputPhone.classList.add('required');
+    arr.push(false);
+  } else {
+    inputPhone.classList.remove('required');
+  }
+
+  const inputCheckbox = form.querySelector('.js-required-checkbox');
+  if (!inputCheckbox.checked) {
+    arr.push(false);
   }
 
   if (arr.length == 0) {
-    for (let i = 0; i < input.length; i++) {
-      input[i].classList.remove('required');
-    }
 
-    // Создание объекта
-    let formData = {
-      name: form.querySelector('.name').value,
-      phone: form.querySelector('.phone').value,
-      startDate: form.querySelector('#modal-start-date').value,
-      guest: form.querySelector('#modal-guest').value,
-      checkbox: form.querySelector('.custom-checkbox').checked,
-    };
+    fetch('/phpmailer/mailer.php', {
+      method: 'POST',
+      cache: 'no-cache',
+      body: new FormData(form)
+    })
+    .catch((error) => {
+      console.log(error);
+    })
 
-    // Передача
-    let request = new XMLHttpRequest();
-
-    request.open('post', "phpmailer/mailer.php");
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&start_date=' + encodeURIComponent(formData.startDate) + '&guest=' + encodeURIComponent(formData.guest) + '&checkbox=' + encodeURIComponent(formData.checkbox));
-
-    // Сообщение
     alert("Спасибо. Мы свяжемся с вами.");
 
-    // Очистка формы
     form.reset();
-    form.querySelector('#modal-start-date').value = '';
-    form.querySelector('#modal-guest').value = '';
+
   }
 
+  return false;
+}
+
+if (callbackModalFormBtn) {
+  callbackModalFormBtn.onclick = function() {
+    ajaxCallback(callbackModalForm);
+  }
 }
 
 
@@ -199,8 +183,8 @@ function getCookie(name) {
 }
 
 function checkCookies() {
-  let cookieNote = document.querySelector('#cookie_note');
-  let cookieBtnAccept = cookieNote.querySelector('#cookie_accept');
+  const cookieNote = document.querySelector('#cookie_note');
+  const cookieBtnAccept = cookieNote.querySelector('#cookie_accept');
 
   // Если куки we-use-cookie нет или она просрочена, то показываем уведомление
   if (!getCookie('we-use-cookie')) {

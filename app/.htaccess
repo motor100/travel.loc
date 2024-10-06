@@ -26,7 +26,7 @@ AddType image/svg+xml .svg
         Header set Cache-Control "max-age=31557900"
     </FilesMatch>
     #кэшировать флэш на год
-    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png|webp)$">
         Header set Cache-Control "max-age=31557900"
     </FilesMatch>
     #кэшировать шрифты на год
@@ -86,5 +86,4 @@ RewriteRule ^(.*)$ https://xn----7sbblwda0aoi4aado7d.xn--p1ai/$1 [R=301,L]
     Header unset ETag
 </IfModule>
 FileETag None
-
 
