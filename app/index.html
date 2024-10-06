@@ -128,7 +128,8 @@
 
     <section id="off-road-tour-section" class="off-road-tour-section section">
       <div class="container-fluid">
-        <h2 class="section-title"><span class="greencolor">Туры</span> на внедорожниках <span class="orangecolor">по Уралу</span></h2>
+        <!-- <h2 class="section-title"><span class="greencolor">Туры</span> на внедорожниках <span class="orangecolor">по Уралу</span></h2> -->
+        <h2 class="section-title">Путешествия <span class="orangecolor">по Южному Уралу</span></h2>
         <div class="price">
           <div class="price-item price-item-public">
             <div class="price-item__content">
@@ -413,12 +414,12 @@
             <div class="form-group">
               <div class="radio-wrapper">
                 <span class="radio-text">WhatsApp</span>
-                <input type="radio" name="messenger" id="radio-whatsapp" class="custom-radio" name="messenger" value="whatsapp">
+                <input type="radio" name="messenger" id="radio-whatsapp" class="custom-radio" value="whatsapp">
                 <label for="radio-whatsapp" class="custom-radio-label"></label>
               </div>
               <div class="radio-wrapper">
                 <span class="radio-text">Telegram</span>
-                <input type="radio" name="messenger" id="radio-telegram" class="custom-radio" name="messenger" value="telegram">
+                <input type="radio" name="messenger" id="radio-telegram" class="custom-radio" value="telegram">
                 <label for="radio-telegram" class="custom-radio-label"></label>
               </div>
             </div>
@@ -450,7 +451,7 @@
       'use strict';
 
       var loadedMetrica = false;
-      var metricaId = 68162221;
+      var metricaId = 98559703;
       var timerId;
 
       if ( navigator.userAgent.indexOf( 'YandexMetrika' ) > -1 ) {
@@ -472,12 +473,6 @@
       }
 
       function loadMetrica( e ) {
-
-        if ( e && e.type ) {
-          console.log( e.type );
-        } else {
-          console.log( 'DOMContentLoaded' );
-        }
 
         if ( loadedMetrica ) {
           return;
@@ -509,17 +504,16 @@
     })()
   </script>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TSGGGGZC');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSGGGGZC"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <script>
+    setTimeout(function(){
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TSGGGGZC');
+    }, 3000);
+  </script>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSGGGGZC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
 
 </body>
 </html>

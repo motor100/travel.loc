@@ -49,12 +49,13 @@ AddType image/svg+xml .svg
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
     ExpiresByType application/x-shockwave-flash "access plus 1 year"
     #кэшировать css, javascript и текстовые файлы на одну неделю
-    ExpiresByType text/css "access plus 604800 seconds"
-    ExpiresByType text/javascript "access plus 604800 seconds"
-    ExpiresByType application/javascript "access plus 604800 seconds"
-    ExpiresByType application/x-javascript "access plus 604800 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
     #кэшировать html и htm файлы на один день
     ExpiresByType text/html "access plus 43200 seconds"
     #кэшировать xml файлы на десять минут
@@ -71,16 +72,14 @@ AddType image/svg+xml .svg
 # Redirect to https 
 # RewriteEngine On
 # RewriteCond %{SERVER_PORT} !^443$
-# RewriteRule .* https://xn----7sbblwda0aoi4aado7d.xn--p1ai/$1 [R=301,L]
+# RewriteRule .* https://xn--80adiabrxwdfmgkdkkd1f.xn--p1ai/$1 [R=301,L]
 
-
+# Redirect from www to without www
 # Options +FollowSymLinks
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.xn----7sbblwda0aoi4aado7d.xn--p1ai$ [NC]
-RewriteRule ^(.*)$ https://xn----7sbblwda0aoi4aado7d.xn--p1ai/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.xn--80adiabrxwdfmgkdkkd1f.xn--p1ai$ [NC]
+RewriteRule ^(.*)$ https://xn--80adiabrxwdfmgkdkkd1f.xn--p1ai/$1 [R=301,L]
 
-
- 
 ### Удалить заголовок ETag (иначе есть проблемы с кешированием при включенном сжатии)
 <IfModule mod_headers.c>
     Header unset ETag
